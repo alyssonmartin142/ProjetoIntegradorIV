@@ -41,7 +41,16 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
+      out.write('\n');
+      br.com.controller.Consulta consulta = null;
+      synchronized (_jspx_page_context) {
+        consulta = (br.com.controller.Consulta) _jspx_page_context.getAttribute("consulta", PageContext.PAGE_SCOPE);
+        if (consulta == null){
+          consulta = new br.com.controller.Consulta();
+          _jspx_page_context.setAttribute("consulta", consulta, PageContext.PAGE_SCOPE);
+        }
+      }
+      out.write("  \n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -60,7 +69,16 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\" href=\"css/custom.css\">\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h1>Hello World!</h1>\n");
+      out.write("        <h1>Bem Vindo!</h1>\n");
+      out.write("        <h2>Apresentação Trabalho Integrador do Projeto Integrador IV</h2>\n");
+      out.write("        <h2>Faculdade Integrado</h2>\n");
+      out.write("        \n");
+      out.write("        <img id=\"img\" src=\"img/logo_faculdade_policromia_vertical.png\" \n");
+      out.write("            ");
+out.print(consulta.ConsultarBanco("imagens", "id_img", "caminho_img", 1));
+      out.write("\n");
+      out.write("            >\n");
+      out.write("        \n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

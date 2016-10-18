@@ -79,6 +79,7 @@ public final class paginaDisciplina_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("        <link rel=\"stylesheet\" href=\"css/custom.css\">\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
+      out.write("        \n");
       out.write("        <h1>Analise e Desenvolvimento de Sistemas!</h1>\n");
       out.write("        \n");
       out.write("        <h2>Tabela com todas as disciplinas e semestres do curso</h2>\n");
@@ -101,6 +102,7 @@ public final class paginaDisciplina_jsp extends org.apache.jasper.runtime.HttpJs
                 }
             
       out.write("\n");
+      out.write("            \n");
       out.write("            </table>\n");
       out.write("        </div>\n");
       out.write("    </body>\n");
