@@ -76,4 +76,4 @@ descrição_img varchar(50),
 caminho_img text
 );
 
-insert into imagens (id_img, descrição_img, caminho_img) values (1, 'Logo Guia', 'img/logo.png');
+insert into imagens (id_img, descrição_img, caminho_img) values (1, 'Logo Guia', 'img/logo_faculdade_policromia_vertical.png');
