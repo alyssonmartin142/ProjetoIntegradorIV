@@ -2,7 +2,7 @@ create database projeto
 default character set utf8
 default collate utf8_general_ci;
 
-create table professoresimagensimagensimagenscaminho_img (
+create table professores (
 id_professor tinyint auto_increment,
 nome_professor varchar(100),
 primary key (id_professor) 
