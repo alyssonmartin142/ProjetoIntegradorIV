@@ -21,7 +21,6 @@
         <link rel="stylesheet" href="css/custom.css">
         </head>
         <body>
-            <a href="http://localhost:8084/ServidorProjeto/index.jsp" class="btn btn-default" role="button">Voltar</a>
             <h1>Analise e Desenvolvimento de Sistemas!</h1>
             <h2>Lista de Professores</h2>
             <div class="container" id="professor">

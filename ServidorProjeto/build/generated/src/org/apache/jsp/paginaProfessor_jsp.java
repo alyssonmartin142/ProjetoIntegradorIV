@@ -81,6 +81,7 @@ public final class paginaProfessor_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        <link rel=\"stylesheet\" href=\"css/custom.css\">\n");
       out.write("        </head>\n");
       out.write("        <body>\n");
+      out.write("            <a href=\"http://localhost:8084/ServidorProjeto/index.jsp\" class=\"btn btn-default\" role=\"button\">Voltar</a>\n");
       out.write("            <h1>Analise e Desenvolvimento de Sistemas!</h1>\n");
       out.write("            <h2>Lista de Professores</h2>\n");
       out.write("            <div class=\"container\" id=\"professor\">\n");

@@ -15,7 +15,6 @@ semestre varchar(100),
 primary key (id_disciplina)
 );
 
-
 insert into professores (nome_professor) values ('Rosely Scheffer');
 insert into professores (nome_professor) values ('Alan Adriel Lobato Rodrigues');
 insert into professores (nome_professor) values ('Bruno Henrique Pachulski Camara');
@@ -77,3 +76,5 @@ caminho_img text
 );
 
 insert into imagens (id_img, descrição_img, caminho_img) values (1, 'Logo Guia', 'img/logo_faculdade_policromia_vertical.png');
+
+select * from imagens;

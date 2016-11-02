@@ -1,5 +1,6 @@
 <jsp:useBean id="consulta" class="br.com.controller.Consulta"/>  
 <jsp:useBean id="con" class="br.com.controller.DisciplinasController"/> 
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -20,7 +21,7 @@
         <link rel="stylesheet" href="css/custom.css">
     </head>
     <body>
-        <a href="http://localhost:8084/ServidorProjeto/index.jsp" class="btn btn-default" role="button">Voltar</a>
+        
         <h1>Analise e Desenvolvimento de Sistemas!</h1>
         
         <h2>Tabela com todas as disciplinas e semestres do curso</h2>

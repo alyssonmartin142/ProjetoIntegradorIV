@@ -51,6 +51,15 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
         }
       }
       out.write("  \n");
+      br.com.controller.Menu menu = null;
+      synchronized (_jspx_page_context) {
+        menu = (br.com.controller.Menu) _jspx_page_context.getAttribute("menu", PageContext.PAGE_SCOPE);
+        if (menu == null){
+          menu = new br.com.controller.Menu();
+          _jspx_page_context.setAttribute("menu", menu, PageContext.PAGE_SCOPE);
+        }
+      }
+      out.write("  \n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -61,24 +70,33 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <!-- JS -->\n");
       out.write("        <script type=\"text/javascript\" src=\"js/lib/jquery-3.1.1.min.js\"></script>\n");
       out.write("        <script type=\"text/javascript\" src=\"js/lib/bootstrap.min.js\"></script>\n");
+      out.write("        <link rel=\"stylesheet\" href=\"http://www.w3schools.com/lib/w3.css\">\n");
       out.write("\n");
       out.write("        <!-- CSS -->\n");
-      out.write("        <link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n");
       out.write("        <link rel=\"stylesheet\" href=\"css/reset.css\">\n");
       out.write("        <link rel=\"stylesheet\" href=\"css/normalize.css\">\n");
       out.write("        <link rel=\"stylesheet\" href=\"css/custom.css\">\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h1>Bem Vindo!</h1>\n");
-      out.write("        <h2>Apresentação Trabalho Integrador do Projeto Integrador IV</h2>\n");
-      out.write("        <h2>Faculdade Integrado</h2>\n");
-      out.write("        \n");
-      out.write("        <img id=\"img\" src=\"img/logo_faculdade_policromia_vertical.png\" \n");
+      out.write("        <!-- Navbar -->\n");
+      out.write("        ");
+
+            out.print(menu.MostrarMenu());
+        
+      out.write("\n");
+      out.write("        <div class=\"w3-content\" style=\"margin-left: 15%; margin-top:46px\">\n");
+      out.write("            <CENTER><img src=\" \n");
       out.write("            ");
 out.print(consulta.ConsultarBanco("imagens", "id_img", "caminho_img", 1));
       out.write("\n");
-      out.write("            >\n");
-      out.write("        \n");
+      out.write("            \" height=\"250\" width=\"300\"></CENTER>\n");
+      out.write("        </div>\n");
+      out.write("        <h1>Bem Vindo!</h1>\n");
+      out.write("        <h2>Apresentação Trabalho Integrador do Projeto Integrador IV</h2>\n");
+      out.write("        <h2>Faculdade Integrado</h2>\n");
+      out.write("        <div class=\"container\">\n");
+      out.write("        </div>\n");
+      out.write("        </div>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

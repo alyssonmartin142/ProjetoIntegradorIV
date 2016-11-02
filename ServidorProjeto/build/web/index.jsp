@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="consulta" class="br.com.controller.Consulta"/>  
+<jsp:useBean id="menu" class="br.com.controller.Menu"/>  
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,15 +11,19 @@
         <!-- JS -->
         <script type="text/javascript" src="js/lib/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/custom.css">
     </head>
     <body>
-        <div class="container">
+        <!-- Navbar -->
+        <%
+            out.print(menu.MostrarMenu());
+        %>
+        <div class="w3-content" style="margin-left: 15%; margin-top:46px">
             <CENTER><img src=" 
             <%out.print(consulta.ConsultarBanco("imagens", "id_img", "caminho_img", 1));%>
             " height="250" width="300"></CENTER>
@@ -27,11 +32,7 @@
         <h2>Apresentação Trabalho Integrador do Projeto Integrador IV</h2>
         <h2>Faculdade Integrado</h2>
         <div class="container">
-        <center>
-            <a href="http://localhost:8084/ServidorProjeto/paginaProfessor.jsp" class="btn btn-default" role="button">Professores</a>
-            <a href="http://localhost:8084/ServidorProjeto/paginaDisciplina.jsp" class="btn btn-default" role="button">Disciplinas</a>
-        </center>
         </div>
-        
+        </div>
     </body>
 </html>
